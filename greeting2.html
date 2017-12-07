@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My First React app</title>
+    <title>My Second React app</title>
   </head>
   <body>
 
@@ -12,18 +12,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
     <script type="text/babel">
-       class Greeting extends React.Component {
+       class HelloMessage extends React.Component {
          render() {
            return (
              <div>
-               <h1>Hello World!</h1>
+               <h3>Aloha {this.props.name}!</h3>
              </div>
            );
          }
        }
 
        ReactDOM.render(
-         <Greeting />, document.getElementById('app')
+         <HelloMessage name="Stephen" />, document.getElementById('app')
        );
     </script>
   </body>
