@@ -13,10 +13,18 @@
 
     <script type="text/babel">
        class HelloMessage extends React.Component {
+         constructor(props){
+             super(props);
+             this.state = {
+                 visit: 2
+             }
+         }
+
          render() {
            return (
              <div>
                <h3>Aloha {this.props.name}!</h3>
+               <h4>You have visited us {this.state.visit} times</h4>
              </div>
            );
          }
